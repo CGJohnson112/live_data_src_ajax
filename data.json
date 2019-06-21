@@ -1,0 +1,47 @@
+[
+{
+"id": "1",
+"hours": "8AM to 930PM",
+"address": "5510 Bayrischse Ave",
+"city": "Kansas City",
+"state": "Missouri",
+"phone": "555-555-5521",
+"companyId": "0001"
+},
+{
+"id": "2",
+"hours": "8AM to 930PM",
+"address": "1030 Independence Ave",
+"city": "Kansas City",
+"state": "Missouri",
+"phone": "555-555-5100",
+"companyId": "0002"
+},
+{
+"id": "3",
+"hours": "8AM to 100PM",
+"address": "2300 Sunrise St",
+"city": "Kurtwood",
+"state": "Missouri",
+"phone": "555-111-5521",
+"companyId": "0003"
+},
+{
+"id": "4",
+"hours": "8AM to 1130PM",
+"address": "100 Sunset Blvd",
+"city": "Brentwood",
+"state": "California",
+"phone": "555-900-5521",
+"companyId": "0004"
+},
+{
+"id": "5",
+"hours": "7AM to 930PM",
+"address": "3300 Nicole Kidman Rd",
+"city": "Brentwood",
+"state": "California",
+"phone": "555-555-5521",
+"companyId": "0010"
+}
+]
