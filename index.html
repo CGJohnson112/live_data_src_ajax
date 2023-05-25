@@ -2,51 +2,27 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <title>Webslesson Tutorial | Search HTML Table Data by using JQuery</title>
+  <title>Countries Search Engine with jQuery/JSON</title>
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
   <link rel="stylesheet" href="style.css">
-
+  
  </head>
  <body>
   <br /><br />
-  <div class="container" style="width:900px;">
-   <h2 align="center">Razzy X Store Locator</h2>
-   <h3 align="center">Type city or state to find your store</h3>   
+  <div class="container">
+   <h2 align="center">World Countries List</h2>
+   <h3 align="center">Search for your country using this list</h3>   
    <br /><br />
    <div align="center">
-    <input type="text" name="search" id="search" placeholder="Search Employee Details" class="form-control" />
+    <input type="text" name="search" id="search" placeholder="Search for Country or Country Code" class="form-control" />
    </div>
    <ul class="list-group" id="result"></ul>
    <br />
   </div>
+  <script src = "script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  </body>
 </html>
-
-<script>
-$(document).ready(function(){
- $.ajaxSetup({ cache: false });
- $('#search').keyup(function(){
-  $('#result').html('');
-  $('#state').val('');
-  var searchField = $('#search').val();
-  var expression = new RegExp(searchField, "i");
-  $.getJSON('data.json', function(data) {
-   $.each(data, function(key, value){
-    if (value.state.search(expression) != -1 || value.city.search(expression) != -1 || value.address.search(expression) != -1)
-    {
-     $('#result').append('<li class="list-group-item link-class"> '+ value.hours +' | <span class="text-muted">' +value.address+  '</span>| <span class="text-muted">' +value.city+ ' </span>| <span class="text-muted">' + value.state + '</span>| <span class="text-muted">' + value.companyId + '</span> | <span class="text-muted">' + value.phone + '</span></li>');
-    }
-   });   
-  });
- });
- 
- $('#result').on('click', 'li', function() {
-  var click_text = $(this).text().split('|');
-  $('#search').val($.trim(click_text[0]));
-  $("#result").html('');
- });
-});
-</script>
+<script src="script.js"></script>
